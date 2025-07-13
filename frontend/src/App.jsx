@@ -1,9 +1,33 @@
-import React from "react";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Home from "./pages/Home";
+import MainLayout from "./layouts/MainLayout";
+import ErrorPage from "./pages/ErrorPage";
+
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <MainLayout />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+    ],
+  },
+  {
+    path: "*",
+    element: <ErrorPage />,
+  },
+]);
 
 const App = () => {
+
   return (
     <>
-      <div className="text-3xl text-red-500">App</div>
+      <RouterProvider router={router}>
+
+      </RouterProvider>
     </>
   );
 };
