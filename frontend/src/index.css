@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -113,7 +116,11 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    font-family: "Winky Rough", sans-serif;
+    font-style: normal;
+
   }
+
   body {
     @apply bg-background text-foreground;
   }

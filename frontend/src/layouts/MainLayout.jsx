@@ -4,8 +4,10 @@ import { Outlet } from "react-router-dom";
 const MainLayout = () => {
     return (
         <>
-            <Navbar />
-            <Outlet /> {/* Renders the matched child route */}
+            <div className="relative">
+                <Navbar />
+                <Outlet /> {/* Renders the matched child route */}
+            </div>
         </>
     );
 };
