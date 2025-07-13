@@ -5,9 +5,9 @@ const PORT = process.env.PORT || 3000;
 
 connectToDatabase().then(() => {
     app.listen(PORT, () => {
-        console.log(`Server is running on http://localhost:${PORT}`);
+        console.log(`Server running on port ${PORT}`);
     });
-}).catch(error => {
-    console.error('Failed to start server due to database connection error:', error);
-    process.exit(1); // Exit the process with failure
+}).catch((error) => {
+    console.log(error);
+    process.exit(1);
 });
