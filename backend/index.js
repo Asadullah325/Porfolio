@@ -1,13 +1,7 @@
 import app from './app.js';
 import connectToDatabase from './database/Db.js';
+import serverless from 'serverless-http';
 
-const PORT = process.env.PORT || 3000;
+await connectToDatabase();
 
-connectToDatabase().then(() => {
-    app.listen(PORT, () => {
-        console.log(`Server running on port ${PORT}`);
-    });
-}).catch((error) => {
-    console.log(error);
-    process.exit(1);
-});
+export const handler = serverless(app); // ✅ export the handler Vercel/Netlify expects
