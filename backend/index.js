@@ -1,13 +1,24 @@
-import app from './app.js';
-import connectToDatabase from './database/Db.js';
+// /api/backend/index.js
+import serverless from 'serverless-http';
+import app from '../../app.js'; // Adjust path as needed
+import connectToDatabase from '../../database/Db.js';
 
-const PORT = process.env.PORT || 3000;
+let isDbConnected = false;
 
-connectToDatabase().then(() => {
-    app.listen(PORT, () => {
-        console.log(`Server is running on http://localhost:${PORT}`);
-    });
-}).catch(error => {
-    console.error('Failed to start server due to database connection error:', error);
-    process.exit(1); // Exit the process with failure
-});
+const handler = async (req, res) => {
+  if (!isDbConnected) {
+    try {
+      await connectToDatabase();
+      isDbConnected = true;
+    } catch (err) {
+      console.error('Database connection failed:', err);
+      res.status(500).send('Database connection error');
+      return;
+    }
+  }
+
+  const expressHandler = serverless(app);
+  return expressHandler(req, res);
+};
+
+export default handler;
