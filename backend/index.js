@@ -1,7 +1,7 @@
 // /api/backend/index.js
 import serverless from 'serverless-http';
-import app from '../../app.js'; // Adjust path as needed
-import connectToDatabase from '../../database/Db.js';
+import app from './app.js';
+import connectToDatabase from './database/Db.js';
 
 let isDbConnected = false;
 
