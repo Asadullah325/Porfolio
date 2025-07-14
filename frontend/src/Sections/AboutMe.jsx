@@ -33,15 +33,14 @@ const AboutMe = () => {
                 opacity-0
             "
         >
-            <div className="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between h-full py-10 px-4 lg:px-16 space-y-4 md:space-y-0 md:space-x-6">
-
+            <div className="container mx-auto flex flex-col-reverse space-y-8 md:space-y-0 md:flex-row items-center justify-between h-full py-10 px-4 lg:px-16">
                 {/* Image Section */}
-                <div className="flex flex-col md:w-1/3 items-center justify-center space-y-4 md:items-start">
+                <div className="flex flex-col items-center justify-center space-y-4 md:items-start w-full md:w-1/3 m-0">
                     <img
                         src={AboutMeImage}
                         alt="About Me"
                         className="
-                            w-80 h-80 rounded-full object-cover
+                            w-64 h-64 md:w-80 md:h-80 rounded-full object-cover
                             shadow-[0_0_40px_rgba(219,181,207,0.6)] 
                             dark:shadow-[0_0_40px_rgba(155,23,126,0.7)]
                             hover:shadow-[0_0_60px_rgba(219,181,207,0.8)] 
@@ -52,58 +51,58 @@ const AboutMe = () => {
                 </div>
 
                 {/* Text Section */}
-                <div className="flex-1">
-                    <div className="flex flex-col space-y-4">
-                        <h2 className="text-4xl font-bold text-center md:text-left">About Me</h2>
+                <div className="flex flex-col items-center md:items-start space-y-4 w-full md:w-2/3 mb-10 md:mb-0">
+                    <div className="flex flex-col space-y-4 w-full">
+                        <h2 className="text-3xl sm:text-4xl font-bold text-center md:text-left">About Me</h2>
 
-                        <p className="text-lg">
+                        <p className="text-base sm:text-lg text-center md:text-left">
                             I am a passionate web developer with a love for creating beautiful and functional websites.
                             My journey in web development started with a curiosity to understand how the web works,
                             and it has since evolved into a full-fledged career.
                         </p>
 
-                        <p className="text-lg">
+                        <p className="text-base sm:text-lg text-center md:text-left">
                             I specialize in front-end development, crafting responsive and user-friendly interfaces.
                             My goal is to bring your ideas to life through code and design.
                         </p>
 
-                        <p className="text-lg">
+                        <p className="text-base sm:text-lg text-center md:text-left">
                             I am constantly learning and adapting to new technologies, and I thrive in collaborative environments where I can contribute my skills and learn from others.
                         </p>
 
                         <div className="flex flex-col space-y-2">
-                            <h3 className="text-xl font-semibold mb-4">Skills</h3>
-                            <ul className="list-disc flex flex-wrap gap-4 ml-4">
-                                <li className="flex items-center bg-black dark:bg-[#3e013a] text-white px-3 py-1 rounded-md">
-                                    <FaHtml5 className="text-[#E34F26] mr-2 text-xl" />
+                            <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-4 text-center md:text-left">Skills</h3>
+                            <ul className="list-disc flex flex-wrap gap-2 sm:gap-4 ml-4 justify-center md:justify-start">
+                                <li className="flex items-center bg-black dark:bg-[#3e013a] text-white px-2 sm:px-3 py-1 rounded-md text-sm sm:text-base">
+                                    <FaHtml5 className="text-[#E34F26] mr-2 text-lg sm:text-xl" />
                                     HTML5
                                 </li>
-                                <li className="flex items-center bg-black dark:bg-[#3e013a] text-white px-3 py-1 rounded-md">
-                                    <FaCss3 className="text-[#1572B6] mr-2 text-xl" />
+                                <li className="flex items-center bg-black dark:bg-[#3e013a] text-white px-2 sm:px-3 py-1 rounded-md text-sm sm:text-base">
+                                    <FaCss3 className="text-[#1572B6] mr-2 text-lg sm:text-xl" />
                                     CSS3
                                 </li>
-                                <li className="flex items-center bg-black dark:bg-[#3e013a] text-white px-3 py-1 rounded-md">
-                                    <FaJs className="text-[#F7DF1E] mr-2 text-xl" />
+                                <li className="flex items-center bg-black dark:bg-[#3e013a] text-white px-2 sm:px-3 py-1 rounded-md text-sm sm:text-base">
+                                    <FaJs className="text-[#F7DF1E] mr-2 text-lg sm:text-xl" />
                                     JavaScript
                                 </li>
-                                <li className="flex items-center bg-black dark:bg-[#3e013a] text-white px-3 py-1 rounded-md">
-                                    <FaReact className="text-[#61DAFB] mr-2 text-xl" />
+                                <li className="flex items-center bg-black dark:bg-[#3e013a] text-white px-2 sm:px-3 py-1 rounded-md text-sm sm:text-base">
+                                    <FaReact className="text-[#61DAFB] mr-2 text-lg sm:text-xl" />
                                     React
                                 </li>
-                                <li className="flex items-center bg-black dark:bg-[#3e013a] text-white px-3 py-1 rounded-md">
-                                    <FaNodeJs className="text-[#339933] mr-2 text-xl" />
+                                <li className="flex items-center bg-black dark:bg-[#3e013a] text-white px-2 sm:px-3 py-1 rounded-md text-sm sm:text-base">
+                                    <FaNodeJs className="text-[#339933] mr-2 text-lg sm:text-xl" />
                                     Node.js
                                 </li>
-                                <li className="flex items-center bg-black dark:bg-[#3e013a] text-white px-3 py-1 rounded-md">
-                                    <SiExpress className="text-[#000000] mr-2 text-xl" />
+                                <li className="flex items-center bg-black dark:bg-[#3e013a] text-white px-2 sm:px-3 py-1 rounded-md text-sm sm:text-base">
+                                    <SiExpress className="text-[#000000] mr-2 text-lg sm:text-xl" />
                                     Express.js
                                 </li>
-                                <li className="flex items-center bg-black dark:bg-[#3e013a] text-white px-3 py-1 rounded-md">
-                                    <SiMongodb className="text-[#47A248] mr-2 text-xl" />
+                                <li className="flex items-center bg-black dark:bg-[#3e013a] text-white px-2 sm:px-3 py-1 rounded-md text-sm sm:text-base">
+                                    <SiMongodb className="text-[#47A248] mr-2 text-lg sm:text-xl" />
                                     MongoDB
                                 </li>
-                                <li className="flex items-center bg-black dark:bg-[#3e013a] text-white px-3 py-1 rounded-md">
-                                    <FaGithub className="text-[#181717] bg-white rounded-full mr-2 text-xl" />
+                                <li className="flex items-center bg-black dark:bg-[#3e013a] text-white px-2 sm:px-3 py-1 rounded-md text-sm sm:text-base">
+                                    <FaGithub className="text-[#181717] bg-white rounded-full mr-2 text-lg sm:text-xl" />
                                     Git & GitHub
                                 </li>
                             </ul>

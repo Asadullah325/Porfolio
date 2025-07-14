@@ -45,7 +45,7 @@ const HeroSection = () => {
                             src={HeroImage}
                             alt="Hero"
                             className="
-                                w-80 h-80 rounded-full object-cover
+                                w-64 h-64 sm:w-80 sm:h-80 rounded-full object-cover
                                 shadow-[0_0_40px_rgba(219,181,207,0.6)] 
                                 dark:shadow-[0_0_40px_rgba(155,23,126,0.7)]
                                 hover:shadow-[0_0_60px_rgba(219,181,207,0.8)]
