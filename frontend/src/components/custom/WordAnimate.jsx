@@ -54,7 +54,7 @@ const WordAnimate = () => {
   return (
     <h1
       ref={textRef}
-      className="text-4xl md:text-6xl font-bold mb-4 text-center md:text-left text-[#9B177E] dark:text-[#0a001f] min-h-[60px]"
+      className="text-4xl md:text-6xl font-bold mb-4 text-center md:text-left text-[#9B177E] dark:text-[#FF69B4] min-h-[60px]"
     />
   );
 };
