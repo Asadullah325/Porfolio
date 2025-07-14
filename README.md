@@ -1,12 +1,48 @@
-# React + Vite
+# Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a personal portfolio website built with React and Vite. It showcases my skills, projects, and experience as a developer.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Modern React (with hooks)
+- Fast development with Vite
+- Responsive design
+- Easy to customize and extend
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Install dependencies:**
+
+   ```sh
+   npm install
+   ```
+
+2. **Run the development server:**
+
+   ```sh
+   npm run dev
+   ```
+
+3. **Build for production:**
+   ```sh
+   npm run build
+   ```
+
+## Technologies Used
+
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [ESLint](https://eslint.org/) for code quality
+- **Backend:** Node.js & Express
+
+## Live Demo
+
+Check out the live project here: [https://porfolio-asad-coder.vercel.app/](https://porfolio-asad-coder.vercel.app/)
+
+## Customization
+
+Feel free to modify the content, styles, and components to fit your personal brand and showcase your work.
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
