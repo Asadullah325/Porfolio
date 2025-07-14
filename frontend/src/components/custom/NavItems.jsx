@@ -14,15 +14,23 @@ const NavItems = () => {
                     Home
                 </NavLink>
                 <NavLink
-                    to="/about"
+                    to="/services"
                     className={({ isActive }) =>
                         `text-gray-900 dark:text-white text-xl tracking-wider hover:text-gray-700 dark:hover:text-gray-400 
                 ${isActive ? 'font-bold' : ''}`
                     }>
-                    About
+                    Services
                 </NavLink>
                 <NavLink
 
+                    to="/projects"
+                    className={({ isActive }) =>
+                        `text-gray-900 dark:text-white text-xl tracking-wider hover:text-gray-700 dark:hover:text-gray-400 
+                ${isActive ? 'font-bold' : ''}`
+                    }>
+                    Projects
+                </NavLink>
+                <NavLink
                     to="/contact"
                     className={({ isActive }) =>
                         `text-gray-900 dark:text-white text-xl tracking-wider hover:text-gray-700 dark:hover:text-gray-400 
