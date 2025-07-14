@@ -1,15 +1,38 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import AboutMeImage from '@/assets/About.jpg'
 import { FaCss3, FaGithub, FaHtml5, FaJs, FaNodeJs, FaReact } from "react-icons/fa";
 import { SiExpress, SiMongodb } from "react-icons/si";
 
 const AboutMe = () => {
+    const sectionRef = useRef(null);
+
+    useEffect(() => {
+        const section = sectionRef.current;
+        const handleScroll = () => {
+            if (!section) return;
+            const rect = section.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 100) {
+                section.classList.add('animate-fade-in-up');
+            }
+        };
+        window.addEventListener('scroll', handleScroll);
+        // Initial check in case already in view
+        handleScroll();
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     return (
-        <div className="min-h-[70vh] 
-            bg-[#dbb5cf] dark:bg-[#3e013a] 
-            bg-300 animate-gradient-x 
-            text-gray-900 dark:text-white
-        ">
+        <div
+            ref={sectionRef}
+            className="min-h-[70vh] 
+                bg-[#dbb5cf] dark:bg-[#3e013a] 
+                bg-300 animate-gradient-x 
+                text-gray-900 dark:text-white
+                border-t border-gray-700 dark:border-gray-600
+                transition-colors duration-500
+                opacity-0
+            "
+        >
             <div className="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between h-full py-10 px-4 lg:px-16 space-y-4 md:space-y-0 md:space-x-6">
 
                 {/* Image Section */}
@@ -18,7 +41,7 @@ const AboutMe = () => {
                         src={AboutMeImage}
                         alt="About Me"
                         className="
-                            w-80 h-80 rounded-full object-cover animate-pulse
+                            w-80 h-80 rounded-full object-cover
                             shadow-[0_0_40px_rgba(219,181,207,0.6)] 
                             dark:shadow-[0_0_40px_rgba(155,23,126,0.7)]
                             hover:shadow-[0_0_60px_rgba(219,181,207,0.8)] 
@@ -31,7 +54,7 @@ const AboutMe = () => {
                 {/* Text Section */}
                 <div className="flex-1">
                     <div className="flex flex-col space-y-4">
-                        <h2 className="text-3xl font-bold text-center md:text-left">About Me</h2>
+                        <h2 className="text-4xl font-bold text-center md:text-left">About Me</h2>
 
                         <p className="text-lg">
                             I am a passionate web developer with a love for creating beautiful and functional websites.
@@ -88,6 +111,16 @@ const AboutMe = () => {
                     </div>
                 </div>
             </div>
+            {/* Tailwind CSS for fade-in-up animation */}
+            <style>
+                {`
+                .animate-fade-in-up {
+                    opacity: 1 !important;
+                    transform: translateY(0) !important;
+                    transition: opacity 0.8s cubic-bezier(0.4,0,0.2,1), transform 0.8s cubic-bezier(0.4,0,0.2,1);
+                }
+                `}
+            </style>
         </div>
     )
 }

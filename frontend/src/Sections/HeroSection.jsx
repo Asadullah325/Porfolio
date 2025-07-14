@@ -8,13 +8,14 @@ import WordAnimate from '@/components/custom/WordAnimate';
 const HeroSection = () => {
     return (
         <>
-            <div className="min-h-[80vh] 
+            <div className="min-h-[100vh] 
                 bg-gradient-to-r from-[#e9b3d8] via-[#e0c8f2] to-[#f3e8ff] 
                 dark:from-[#9B177E] dark:via-[#4a0040] dark:to-[#0a001f] 
                 bg-300 animate-gradient-x 
                 text-gray-900 dark:text-white
+                transition-colors duration-500
             ">
-                <div className="container mx-auto flex flex-col space-y-4 items-center md:flex-row justify-between h-full pt-30 pb-10 px-4 lg:px-16">
+                <div className="container mx-auto flex flex-col space-y-4 items-center md:flex-row justify-between h-full pt-40 pb-10 px-4 lg:px-16">
                     <div className="flex flex-col md:w-2/3 items-center space-y-4 md:items-start">
                         <h1 className="text-xl font-bold mb-4 text-center md:text-left">Welcome to My World ☪</h1>
                         <h1 className="text-4xl font-bold mb-4 text-center md:text-left">
@@ -44,7 +45,7 @@ const HeroSection = () => {
                             src={HeroImage}
                             alt="Hero"
                             className="
-                                w-80 h-80 rounded-full object-cover animate-pulse
+                                w-80 h-80 rounded-full object-cover
                                 shadow-[0_0_40px_rgba(219,181,207,0.6)] 
                                 dark:shadow-[0_0_40px_rgba(155,23,126,0.7)]
                                 hover:shadow-[0_0_60px_rgba(219,181,207,0.8)]

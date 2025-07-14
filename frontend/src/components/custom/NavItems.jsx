@@ -14,14 +14,6 @@ const NavItems = () => {
                     Home
                 </NavLink>
                 <NavLink
-                    to="/services"
-                    className={({ isActive }) =>
-                        `text-gray-900 dark:text-white text-xl tracking-wider hover:text-gray-700 dark:hover:text-gray-400 
-                ${isActive ? 'font-bold' : ''}`
-                    }>
-                    Services
-                </NavLink>
-                <NavLink
 
                     to="/projects"
                     className={({ isActive }) =>
