@@ -34,23 +34,7 @@ const Footer = () => {
             <div>
                 &copy; {new Date().getFullYear()} Asad Coder. All rights reserved.
             </div>
-            <div className="mt-2">
-                <a
-                    href="https://porfolio-asad-coder.vercel.app/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#9b177e] dark:text-[#ff69b4] hover:underline transition-colors duration-300"
-                >
-                    Live Portfolio
-                </a>
-                {' | '}
-                <a
-                    href="mailto:asad.coder@example.com"
-                    className="text-[#9b177e] dark:text-[#ff69b4] hover:underline transition-colors duration-300"
-                >
-                    Contact
-                </a>
-            </div>
+            
             <style>
                 {`
                 .animate-fade-in-up {

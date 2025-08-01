@@ -45,7 +45,7 @@ const AboutMe = () => {
                             dark:shadow-[0_0_40px_rgba(155,23,126,0.7)]
                             hover:shadow-[0_0_60px_rgba(219,181,207,0.8)] 
                             dark:hover:shadow-[0_0_60px_rgba(255,105,180,0.9)]
-                            transition-shadow duration-500
+                            transition-shadow duration-500 cursor-pointer
                         "
                     />
                 </div>

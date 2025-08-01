@@ -6,7 +6,7 @@ import { TextPlugin } from "gsap/TextPlugin";
 // Register the plugin
 gsap.registerPlugin(TextPlugin);
 
-const words = ['WEB DEVELOPER', 'UI DESIGNER', 'CREATIVE THINKER', 'TECH ENTHUSIAST'];
+const words = ['WEB DEVELOPER', 'UI DESIGNER', 'MERN STACK DEVELOPER', 'FRONTEND DEVELOPER', 'BACKEND DEVELOPER', 'FULL STACK DEVELOPER'];
 
 const WordAnimate = () => {
   const textRef = useRef(null);
